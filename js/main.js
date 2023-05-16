@@ -44,7 +44,12 @@ function ready() {
 
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked() {
-    alert("Gracias por su compra. ¡Vuelva pronto!");
+    swal({
+        title: "Pago Exitoso",
+        text: "Gracias por su compra. ¡Vuelva pronto!",
+        icon: "success",
+        button: "Finalizar",
+    })
     //Elimino todos los elmentos del carrito
     let carritoItems = document.getElementsByClassName('carrito-items')[0];
     while (carritoItems.hasChildNodes()) {
@@ -88,7 +93,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
     const nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
     for (let i = 0; i < nombresItemsCarrito.length; i++) {
         if (nombresItemsCarrito[i].innerText == titulo) {
-            alert("Ya ha sido agregado al carrito");
+            swal ("¡Espere un momento!", "El elemento ya ha sido agregado al carrito.", "error");
             return;
         }
     }
