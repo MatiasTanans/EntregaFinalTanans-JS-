@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreEntrega 2</title>
+    <title>Tienda Pokémon</title>
+    <!-- Agregando CDN de font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Ruta de nuestro CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Ruta de nuestro JS-->
+    <script src="./js/main.js"></script>
 </head>
-<body onload="horaActual()">
 
-<div>
-    <form name="form_reloj">
-        <input type="text" name="reloj" size="9" readonly onmousedown="return false;">
-    </form>
-</div>
+<body>
 
-    <div class="box">
-        <h2>Los más grandes de Argentina</h2>
+    <header>
+        <h1>Tienda Pokémon</h1>
+    </header>
 
-        <section>
-            <img src="./assets/img/grandesArgentina.png" alt="Escudos de los cinco grandes.">
-        </section>
+    <section class="contenedor">
 
-        <p>En este documento, podremos obtener información sobre los equipos grandes de nuestro país.</p>
-        <p>Para obtener información de los mismos, debe presionar los botones que se encuentran debajo de los escudos.</p>
-    </div>
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Pokémon Amarillo</span>
+                <img src="./assets/img/videojuegos/pokemonAmarillo.jpg" alt="Pokémon Amarillo" class="img-item">
+                <span class="precio-item">$1.100</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pokémon Azul</span>
+                <img src="./assets/img/videojuegos/pokemonAzul.jpg" alt="Pokémon Azul" class="img-item">
+                <span class="precio-item">$900</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pokémon Oro</span>
+                <img src="./assets/img/videojuegos/pokemonOro.jpg" alt="Pokémon Oro" class="img-item">
+                <span class="precio-item">$900</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pokémon Plata</span>
+                <img src="./assets/img/videojuegos/pokemonPlata.jpg" alt="Pokémon Plata" class="img-item">
+                <span class="precio-item">$800</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pokémon Rojo Fuego</span>
+                <img src="./assets/img/videojuegos/pokemonRojoFuego.jpg" alt="Pokémon Rojo Fuego" class="img-item">
+                <span class="precio-item">$1.500</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pokémon Verde Hoja</span>
+                <img src="./assets/img/videojuegos/pokemonVerdeHoja.jpg" alt="Pokémon Verde Hoja" class="img-item">
+                <span class="precio-item">$1.200</span>
+                <button class="boton-item">Agregar</button>
+            </div>
 
-    <section>
+        </div>
+        <!-- Carrito -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Carrito de compras</h2>
+            </div>
 
-    <div class="seccionEscudos">
-
-        <img src="./assets/img/independiente.png" alt="escudo del Rey de Copas">
-        <img src="./assets/img/boca.png" alt="escudo de Boca">
-        <img src="./assets/img/river.png" alt="escudo de River">
-        <img src="./assets/img/racing.png" alt="escudo de Racing">
-        <img src="./assets/img/sanlorenzo.png" alt="escudo de San Lorenzo">
-
-    </div>
-
-    <div class="botones">
-        <input class="escudos" type="button" onclick="Independiente();" value="Independiente">
-        <input class="escudos" type="button" onclick="Boca();" value="Boca Juniors">
-        <input class="escudos" type="button" onclick="River();" value="River Plate">
-        <input class="escudos" type="button" onclick="Racing();" value="Racing Club">
-        <input class="escudos" type="button" onclick="SanLorenzo();" value="SanLorenzo">
-    </div>
-
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Total</strong>
+                    <span class="carrito-precio-total">
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
     </section>
 
-    <script src="./js/main.js"></script>
 </body>
+
 </html>

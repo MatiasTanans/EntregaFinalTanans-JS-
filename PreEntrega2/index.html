@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreEntrega 2</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body onload="horaActual()">
+
+<div>
+    <form name="form_reloj">
+        <input type="text" name="reloj" size="9" readonly onmousedown="return false;">
+    </form>
+</div>
+
+    <div class="box">
+        <h2>Los más grandes de Argentina</h2>
+
+        <section>
+            <img src="./assets/img/grandesArgentina.png" alt="Escudos de los cinco grandes.">
+        </section>
+
+        <p>En este documento, podremos obtener información sobre los equipos grandes de nuestro país.</p>
+        <p>Para obtener información de los mismos, debe presionar los botones que se encuentran debajo de los escudos.</p>
+    </div>
+
+    <section>
+
+    <div class="seccionEscudos">
+
+        <img src="./assets/img/independiente.png" alt="escudo del Rey de Copas">
+        <img src="./assets/img/boca.png" alt="escudo de Boca">
+        <img src="./assets/img/river.png" alt="escudo de River">
+        <img src="./assets/img/racing.png" alt="escudo de Racing">
+        <img src="./assets/img/sanlorenzo.png" alt="escudo de San Lorenzo">
+
+    </div>
+
+    <div class="botones">
+        <input class="escudos" type="button" onclick="Independiente();" value="Independiente">
+        <input class="escudos" type="button" onclick="Boca();" value="Boca Juniors">
+        <input class="escudos" type="button" onclick="River();" value="River Plate">
+        <input class="escudos" type="button" onclick="Racing();" value="Racing Club">
+        <input class="escudos" type="button" onclick="SanLorenzo();" value="SanLorenzo">
+    </div>
+
+    </section>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
