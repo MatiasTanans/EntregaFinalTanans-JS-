@@ -24,15 +24,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Ruta de nuestro CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Ruta de nuestro JS-->
-    <script src="./js/main.js"></script>
 </head>
 
-<body>
+<body class="claro-mode">
 
     <header>
         <h1>Tienda Pokémon</h1>
     </header>
+
+    <div class="container-pokebola">
+        <div class="panel" id="panel">
+            <img class="gris" id="btn-ultraball" src="./assets/img/modoGris/ultraball.png" alt="pokebola ultraball">
+            <img class="claro" id="btn-honorball" src="./assets/img/modoGris/honorball.png" alt="pokebola honorball">
+        </div>
+        <img class="pokebola" id="pokebola" src="./assets/img/modoGris/pokebola.png" alt="pokebola">
+    </div>
 
     <section class="contenedor">
 
@@ -95,6 +101,7 @@
         </div>
     </section>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

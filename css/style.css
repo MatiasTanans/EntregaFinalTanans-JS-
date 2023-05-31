@@ -8,7 +8,7 @@
     font-family: 'Roboto';
 }
 
-body{
+body.claro-mode{
     background-color: cornsilk;
 }
 header{
@@ -197,10 +197,65 @@ header h1{
     scale: 1.05;
 }
 
+/* Agregando MODO GRIS a nuestro proyecto */
+
+body.grey-mode{
+    background-color: grey;
+}
+
+body.grey-mode .contenedor .contenedor-items .item{
+    border: 5px solid white;
+}
+
+.container-pokebola{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container-pokebola .panel{
+    position: absolute;
+    background-color: rgb(235, 191, 110);
+    transition: .3s all;
+    box-shadow: 1px 1px 5px;
+    width: 60px;
+    height: 100px;
+    border-radius: 5px;
+    transform: translateY(-105%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.container-pokebola .panel.active{
+    display: flex;
+}
+
+.container-pokebola .panel .gris{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: 3s all;
+}
+
+.container-pokebola .panel .claro{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 3s all;
+}
+
+.container-pokebola .pokebola{
+    cursor: pointer;
+    width: 50px;
+}
+
 /* Sección Responsive */
 @media screen and (max-width: 850px) {
     .contenedor {
-      display: block;
+    display: block;
     }
     .contenedor-items{
         width: 100% !important;
@@ -208,4 +263,4 @@ header h1{
     .carrito{
         width: 100%;
     }
-  }
+}

@@ -199,5 +199,51 @@ function actualizarTotalCarrito() {
     total = Math.round(total * 100) / 100;
 
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$' + total.toLocaleString("es") + ",00";
-
 }
+
+// Modo Claro-Gris con localstorage
+
+// Declaro las variables llamándolas por los id que les dí en mi html
+
+const pokebola = document.getElementById('pokebola');
+const panel = document.getElementById('panel');
+const btnHonorball = document.getElementById('btn-honorball');
+const btnUltraball = document.getElementById('btn-ultraball');
+const containerPokebola = document.getElementById('pokebola');
+
+// Creamos una función para que al hacer click sobre la pokebola, se active nuestro panel
+
+pokebola.addEventListener('click',()=>{
+    panel.classList.toggle('active');
+})
+
+// Creamos una función que elimine nuestros estilos del body claro
+// y active los estilos del modo oscuro/gris
+
+btnUltraball.addEventListener('click',()=>{
+    document.body.classList.remove('claro-mode');
+    document.body.classList.add('grey-mode');
+    localStorage.setItem('tema', 'oscuro');
+})
+
+// Creamos una función que elimine los estilos del body oscuro/gris
+// y active los estilos del modo claro
+
+btnHonorball.addEventListener('click',()=>{
+    document.body.classList.remove('grey-mode');
+    document.body.classList.add('claro-mode');
+    localStorage.setItem('tema', 'claro');
+})
+
+// Creamos una función que almacene el estilo elegido en el localstorage
+
+const guardarTema = () =>{
+    if(localStorage.getItem('tema') === 'oscuro'){
+        document.body.classList.remove('claro-mode');
+        document.body.classList.add('grey-mode');
+    }else{
+        document.body.classList.remove('grey-mode');
+    }
+}
+
+guardarTema();
